@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>i am details page</title>
+</head>
+<body>
+<h2>List of details</h2>
+
+<table>
+    <tr>
+        <th>fromaccount</th>
+        <th>toaccount</th>
+        <th>amount</th>
+    </tr>
+    <tr th:each="trans : ${viewAll}">
+        <td th:text="${trans.fromaccount}">id</td>
+        <td th:text="${trans.toaccount}">name</td>
+        <td th:text="${trans.amount}">price</td>
+    </tr>
+</table>
+
+</body>
+</html>
